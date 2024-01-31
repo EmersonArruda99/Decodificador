@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Sixtyfour:BLED,SCAN@0..100,-53..100&display=swap');
+
+:root {
+    --cor-primaria: #607274;
+    --cor_secundaria: #FAEED1;
+    --cor_terciaria: #DED0B6;
+    --cor_texto: #B2A59B;
+
+    --fonte_rubik: "Rubik", sans-serif;
+    --fonte_sixtyfour: "Sixtyfour", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-image: linear-gradient(to top, var(--cor-primaria), red);
+    color: var(--cor_texto);
+}
+
+.cabecalho {
+    padding: 2% 5% 0% 2%;
+    display: flex;
+}
+
+.cabecalho_titulo {
+    font-family: var(--fonte_rubik);
+    color: var(--cor_texto);
+    font-size: 36px;
+    font-weight: 700;
+}
+
+strong {
+    color: var(--cor_secundaria);
+    font-family: var(--fonte_sixtyfour);
+
+}
+
+strong:hover {
+    color: var(--cor_terciaria);
+}
+
+.interacao {
+    padding: 2% 3%;
+    display: flex;
+    align-items: center;
+}
+
+.interacao_conteudo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 80px;   
+}
+
+.textarea {
+    font-family: var(--fonte_rubik);
+    color: var(--cor_texto);
+    font-size: 24px;
+    font-weight: 400;
+    resize: none;   
+    border: 8px inset var(--cor_secundaria);
+    border-radius: 16px;
+    padding: 20px 20px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 200px 0px 400px 0px;
+}
+
+.botoes_botao {
+    background-color: var(--cor_terciaria);
+    color: var(--cor-primaria);
+    font-family: var(--fonte_rubik);
+    font-size: 24px;
+    border: 2px solid var(--cor_secundaria);
+    width: 150px;
+    height: 70px;
+    border-radius: 16px;
+}
+
+.botoes_botao:hover {
+    font-size: 28px;
+    border-radius: 8px;
+    background-color: var(--cor_secundaria);
+}
+
+
+
+.rodape {
+    padding: 24px;
+    background-color: var(--cor_terciaria);
+    color: var(--cor-primaria);
+    text-align: center;
+    font-family: var(--fonte_rubik);
+    font-size: 24px;
+    font-weight: 400;
+
+}
