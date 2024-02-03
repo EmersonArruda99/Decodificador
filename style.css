@@ -17,7 +17,7 @@
 
 body {
     box-sizing: border-box;
-    background-image: linear-gradient(to top, var(--cor-primaria), red);
+    background-image: linear-gradient(to top, var(--cor-primaria), var(--cor_terciaria));
     color: var(--cor_texto);
 }
 
@@ -46,14 +46,22 @@ strong:hover {
 .interacao {
     padding: 2% 3%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    gap: 30px;
 }
 
-.interacao_conteudo {
+.interacao_conteudo_entrada {
     width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 80px;   
+    flex-direction: column;
+    gap: 30px;   
+}
+
+.interacao_conteudo_saida {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .textarea {
@@ -69,9 +77,8 @@ strong:hover {
 
 .botoes {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 200px 0px 400px 0px;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .botoes_botao {
