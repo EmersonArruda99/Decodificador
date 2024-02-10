@@ -10,34 +10,40 @@
 </head>
 <body>
     <header class="cabecalho">
-        <img src="imagens/icon.png" height="50" width="50">
-        <h1 class="cabecalho_titulo">D<strong>e</strong> c<strong>o</strong> d<strong>i</strong> f<strong>i</strong> c<strong>a</strong> d<strong>o</strong>r </h1>
+        <h1 class="cabecalho_titulo">D<strong>e</strong>c<strong>o</strong>d<strong>i</strong>f<strong>i</strong>c<strong>a</strong>d<strong>o</strong>r </h1>
     </header>
 
     <main class="interacao">
             
         <section class="interacao_conteudo_entrada">
 
-            <textarea class="textarea" id="entradaTexto" placeholder="Digite seu texto aqui..." rows="25" cols="40"></textarea>
-            <h3>Apenas letras minusculas</h3>
-            <div class="botoes">
-                <button class="botoes_botao" onclick="">Codificar</button>
-                <button class="botoes_botao" onclick="">Decodificar</button>
-            </div>
-     
-        </section>
+            <textarea class="interacao_conteudo_entrada_texto" id="entradaTexto" placeholder="Digite seu texto" cols="30" rows="10"></textarea>
 
+            <div>
+                <div class="interacao_conteudo_entrada_aviso">
+                    <img src="imagens/icone_interrogacao.png">
+                    <p>Apenas letras minúsculas e sem acento.</p>
+                </div>
+                <div class="interacao_conteudo_entrada_botoes" >
+                    <button class="interacao_conteudo_entrada_botoes_estilo" onclick="">Criptografar</button>
+                    <button class="interacao_conteudo_entrada_botoes_estilo" onclick="">Descriptografar</button>
+                </div>
+            </div>
+
+        </section>
+        
         <section class="interacao_conteudo_saida">
-            <img src="imagens/pensativo.png" alt="Um boneco pensando." width="400px">
-            <textarea class="textarea"  id="saidaTexto" placeholder="Sem nada ainda..." rows="10" cols="10"></textarea>
-            <br>
-            <button class="botoes_botao" onclick="">Copiar</button>
+
+            <img class="interacao_conteudo_saida_imagem" src="imagens/pensa.png" alt="Um boneco pensando." width=" 70%">
+            <textarea class="interacao_conteudo_saida_texto"  id="saidaTexto" placeholder="Sem nada ainda..." cols="30" rows="10"></textarea>
+            <button class="interacao_conteudo_saida_botao" onclick="">Copiar</button>
+
         </section>
         
     </main>
 
     <footer>
-        <p class="rodape">Produzido por Emerson Arruda</p>
+        
     </footer> 
 
 </body>
