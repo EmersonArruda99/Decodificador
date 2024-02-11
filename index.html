@@ -6,6 +6,7 @@
     <title>Decodificador</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="imagens/icon.png">
+    <script src="app.js"></script>
     
 </head>
 <body>
@@ -17,7 +18,7 @@
             
         <section class="interacao_conteudo_entrada">
 
-            <textarea class="interacao_conteudo_entrada_texto" id="entradaTexto" placeholder="Digite seu texto" cols="30" rows="10"></textarea>
+            <textarea class="interacao_conteudo_entrada_texto" id="entradaTexto" placeholder="Digite seu texto" oninput="limparSaida()" cols="30" rows="10"></textarea>
 
             <div>
                 <div class="interacao_conteudo_entrada_aviso">
@@ -25,8 +26,8 @@
                     <p>Apenas letras minúsculas e sem acento.</p>
                 </div>
                 <div class="interacao_conteudo_entrada_botoes" >
-                    <button class="interacao_conteudo_entrada_botoes_estilo" onclick="">Criptografar</button>
-                    <button class="interacao_conteudo_entrada_botoes_estilo" onclick="">Descriptografar</button>
+                    <button class="interacao_conteudo_entrada_botoes_estilo" onclick="codificarTexto()">Criptografar</button>
+                    <button class="interacao_conteudo_entrada_botoes_estilo" onclick="decodificarTexto()">Descriptografar</button>
                 </div>
             </div>
 
@@ -34,16 +35,17 @@
         
         <section class="interacao_conteudo_saida">
 
-            <img class="interacao_conteudo_saida_imagem" src="imagens/pensa.png" alt="Um boneco pensando." width=" 70%">
-            <textarea class="interacao_conteudo_saida_texto"  id="saidaTexto" placeholder="Sem nada ainda..." cols="30" rows="10"></textarea>
-            <button class="interacao_conteudo_saida_botao" onclick="">Copiar</button>
+            <textarea class="interacao_conteudo_saida_texto"  id="saidaTexto" placeholder="Sem nada ainda..." readonly cols="30" rows="10"></textarea>
+            <button class="interacao_conteudo_saida_botao" onclick="copiarTexto()">Copiar</button>
 
         </section>
         
     </main>
 
     <footer>
-        
+        <br><br>
+        <p>Desenvolvido por Emerson Arruda.</p>
+        <br><br>
     </footer> 
 
 </body>
