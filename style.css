@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Sixtyfour:BLED,SCAN@0..100,-53..100&display=swap');
 
 :root {
-    --cor-primaria: #F3EEEA;
-    --cor_secundaria: #EBE3D5;
-    --cor_terciaria: #B0A695;
-    --cor_texto: #776B5D;
+    --cor-primaria: #FFF4E0;
+    --cor_secundaria: #FFBF9B;
+    --cor_terciaria: #B46060;
+    --cor_texto: #4D4D4D;
 
     --fonte_rubik: "Rubik", sans-serif;
     --fonte_sixtyfour: "Sixtyfour", sans-serif;
@@ -19,10 +19,15 @@
 body {
     width: 100%;
     background-color: var(--cor-primaria);
+    margin: 0;  
 }
 
 .cabecalho {
-    padding: 2.5rem ;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .cabecalho_titulo {
@@ -30,6 +35,7 @@ body {
     font-size: 2.5rem;
     color: var(--cor_texto);
     width: auto;
+    margin-top: 1rem;
 }
 
 strong {
@@ -43,29 +49,25 @@ strong:hover {
 
 .interacao {
     display: flex;
-    padding-left: 15rem;
-    padding-right: 15rem;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-    gap: 15rem;
+    flex-wrap: wrap;  
+    gap: 15px;  
+    padding: 2.5rem;
+    justify-content: space-around;  
 }
 
-.interacao_conteudo_entrada {
-    display: flex;
-    flex-direction: column;
-    gap: 15rem;
-    width: 50%;
-    float: left;
+.interacao_conteudo_entrada,
+.interacao_conteudo_saida {
+    width: 100%;  
 }
 
 .interacao_conteudo_entrada_texto {
     resize: none;
     border: none;
     outline: none;
+    color: var(--cor_texto);
     background-color: var(--cor-primaria);
     font-size: 2rem;
 }
-
 .interacao_conteudo_entrada_aviso {
     display: flex;
     color: var(--cor_texto);
@@ -82,15 +84,6 @@ strong:hover {
     gap: 1.5rem;
 }
 
-.interacao_conteudo_entrada_botoes_estilo {
-    font-size: 1rem;
-    font-family: var(--fonte_rubik);
-    border-radius: 1.5rem;
-    width: 20.5rem;
-    height: 4.188rem;
-    border-color: var(--cor_terciaria); 
-}
-
 .interacao_conteudo_entrada_botoes_estilo:hover {
     color: var(--cor-primaria);
     font-size: 1.1rem;
@@ -98,22 +91,22 @@ strong:hover {
 }
 
 .interacao_conteudo_saida {
-    padding: 3rem;
+    padding: 2.5rem;  
     border-radius: 2rem;
-    background-color: var(--cor_secundaria); 
+    background-color: var(--cor_secundaria);
     box-shadow: 5px 10px 18px var(--cor_texto);
     display: flex;
     flex-direction: column;
-    width: 50%;
-    height: 50%;
-    float: left;
+    width: 100%;  
+    max-width: 600px;  
+    margin: 0 auto;  
 }
-
 
 .interacao_conteudo_saida_texto {
     resize: none;
     border: none;
     outline: none;
+    color: var(--cor_texto);
     background-color: var(--cor_secundaria);
     font-size: 2rem;
     width: 100%;
@@ -135,21 +128,58 @@ strong:hover {
     background-color: var(--cor_terciaria);  
 }
 
+.interacao_conteudo_entrada_botoes_estilo {
+    font-size: 1rem;
+    font-family: var(--fonte_rubik);
+    border-radius: 1.5rem;
+    width: 20.5rem;
+    height: 4.188rem;
+    border-color: var(--cor_terciaria); 
+}
+
+.interacao_conteudo_entrada {
+    order: 1;  
+}
+
+.interacao_conteudo_saida {
+    order: 2;  
+}
+
+.interacao_conteudo_entrada_botoes_estilo,
+.interacao_conteudo_saida_botao {
+    width: 100%;  
+}
+
 footer {
     width: 100%;
     font-size: 1.5rem;
     font-family: var(--fonte_rubik);
     text-align: center;
-    background-image: linear-gradient(var(--cor_texto), var(--cor_terciaria));
-    margin-top: 2.5rem;
+    background-image: linear-gradient(var(--cor-primaria), var(--cor_terciaria));
+    margin-top: 0.2rem;
 }
 
-@media (max-width: 1400px) {
-    .interacao {
-        flex-direction: column;
-        padding-left: 5rem;
-        padding-right: 5rem;
-       
+@media (min-width: 600px) {
+    .interacao_conteudo_entrada,
+    .interacao_conteudo_saida {
+        width: 48%;
+        margin: 0;  
     }
-    
+}
+
+@media (max-width: 600px) {
+    .cabecalho {
+        padding: 5%;
+        align-items: start;
+    }
+
+    .cabecalho_titulo {
+        margin-top: 0;  
+        max-width: 50%;  
+        font-size: 2.3rem;
+    }
+
+    .interacao_conteudo_entrada_texto {
+        width: 48%;
+    }
 }
