@@ -111,6 +111,7 @@ function limparSaida() {
 }
 
 function validarEntrada(texto) {
-    var regex = /^[a-z]+$/;
+    // Expressão regular para verificar se a entrada contém apenas letras minúsculas (com ou sem espaços) e sem acentos ou caracteres especiais
+    var regex = /^[a-z\s]+$/;
     return regex.test(texto);
 }
